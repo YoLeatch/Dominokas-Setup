@@ -276,6 +276,16 @@ fn launch_app(install_dir: String) -> Result<(), String> {
     Ok(())
 }
 
+#[tauri::command]
+fn minimize_window(window: tauri::Window) -> Result<(), String> {
+    window.minimize().map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+fn close_window(window: tauri::Window) -> Result<(), String> {
+    window.close().map_err(|e| e.to_string())
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -284,7 +294,9 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             get_default_install_dir,
             install_launcher,
-            launch_app
+            launch_app,
+            minimize_window,
+            close_window
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
