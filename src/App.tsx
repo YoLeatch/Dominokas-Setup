@@ -164,11 +164,6 @@ function App() {
       <section className="installer-body">
         {step === SetupStep.WELCOME && (
           <div className="screen-container">
-            <div className="step-header">
-              <h2 className="step-title">Bem-vindo ao Dominokas</h2>
-              <p className="step-subtitle">ASSISTENTE DE INSTALAÇÃO DO CLIENT</p>
-            </div>
-            
             <div className="welcome-layout">
               <div className="welcome-logo-pod">
                 <svg className="logo-vector-svg" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,15 +188,12 @@ function App() {
                 </p>
                 <div className="tech-grid">
                   <div className="tech-item">
-                    <div className="tech-dot"></div>
                     <span className="tech-text">Instalação direta no AppData (Sem privilégios de Admin)</span>
                   </div>
                   <div className="tech-item">
-                    <div className="tech-dot"></div>
                     <span className="tech-text">Otimizado para o ecossistema Steamworks e Deadlock</span>
                   </div>
                   <div className="tech-item">
-                    <div className="tech-dot"></div>
                     <span className="tech-text">Gerenciamento automático de túneis e relays de match</span>
                   </div>
                 </div>
