@@ -312,21 +312,10 @@ body {
   position: relative;
 }
 
-.logo-glow-ring {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--color-gold-glow) 0%, transparent 70%);
-  opacity: 0.6;
-  animation: glow-pulse 3s infinite ease-in-out;
-}
-
 .logo-vector-svg {
   width: 100px;
   height: 100px;
   z-index: 2;
-  filter: drop-shadow(0 0 12px rgba(240, 185, 11, 0.3));
 }
 
 .welcome-info {
